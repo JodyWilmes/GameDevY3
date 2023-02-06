@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         RotateEyes();
+        RotateBody();
     }
 
     private void RotateEyes()
@@ -29,6 +30,6 @@ public class PlayerMovement : MonoBehaviour
     private void RotateBody()
     {
         float xMouse = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
-        Transform.Rotate(Vector3.up * xMouse);
+        transform.Rotate(Vector3.up * xMouse);
     }
 }
